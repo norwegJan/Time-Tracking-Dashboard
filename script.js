@@ -55,7 +55,7 @@ fetch("./data.json")
 dailyBtn.addEventListener("click", (e) => {
   render("daily");
   setActiveBtn(dailyBtn);
-}); 
+});
 
 weeklyBtn.addEventListener("click", (e) => {
   render("weekly");

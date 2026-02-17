@@ -27,7 +27,7 @@ The designs were created to the following widths:
 - Navy 950: hsl(226, 43%, 10%)
 - Navy 900: hsl(235, 46%, 20%)
 - Purple 500: hsl(235, 45%, 61%)
-- Navy 200: hsl(236, 100%, 87%)
+- Navy 200: hsl(0, 0%, 0%)
 
 ## Typography
 
