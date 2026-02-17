@@ -262,6 +262,7 @@ body {
       "social       self-care";
     max-width: 600px;
   }
+  
 
   .app-header {
     grid-area: app-header;
@@ -275,32 +276,27 @@ body {
 
   .work {
     grid-area: work;
-    margin: 0;
   }
 
   .play {
     grid-area: play;
-    margin: 0;
   }
 
   .study {
     grid-area: study;
-    margin: 0;
+
   }
 
   .exercise {
     grid-area: exercise;
-    margin: 0;
   }
 
   .social {
     grid-area: social;
-    margin: 0;
   }
 
   .self-care {
     grid-area: self-care;
-    margin: 0;
   }
 
   .header-profile {
@@ -326,6 +322,35 @@ body {
 /* ===== DESKTOP ===== */
 
 @media (min-width: 1024px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    min-height: 520px;
+    gap: 1.5rem;
+    grid-template-areas:
+      "app-header     work      play      study"
+      "app-header     exercise  social    self-care";
+    max-width: 1200px;
+    margin-top: 15rem;
+  }
+
+  .app-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-profile {
+    justify-content: center;
+  }
+
+  .header-timeframes {
+    margin-top: 0;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 /* ===== FOOTER ===== */
