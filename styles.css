@@ -262,7 +262,6 @@ body {
       "social       self-care";
     max-width: 600px;
   }
-  
 
   .app-header {
     grid-area: app-header;
@@ -284,7 +283,6 @@ body {
 
   .study {
     grid-area: study;
-
   }
 
   .exercise {
@@ -322,12 +320,26 @@ body {
 /* ===== DESKTOP ===== */
 
 @media (min-width: 1024px) {
+  .app-header,
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    margin: 0;
+  }
+
+  .content {
+    margin: 0;
+  }
+
   .app-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
+    grid-template-rows: 1fr 1fr;
     min-height: 520px;
-    gap: 1.5rem;
+    gap: 0rem;
     grid-template-areas:
       "app-header     work      play      study"
       "app-header     exercise  social    self-care";
@@ -345,11 +357,41 @@ body {
   }
 
   .header-timeframes {
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: -1rem;
     justify-content: flex-start;
     gap: 1rem;
     align-items: flex-start;
     text-align: left;
+  }
+
+  .activity {
+    font-size: 1.2rem;
+  }
+
+  .work-main,
+  .play-main,
+  .study-main,
+  .exercise-main,
+  .social-main,
+  .self-care-main {
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    margin-top: 1rem;
+  }
+  .current-hrs {
+    margin: 0;
+    position: relative;
+    right: 1rem;
+    font-size: 2.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .previous-hrs {
+    font-size: 1rem;
   }
 }
 
