@@ -394,12 +394,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-self: left;
+    align-items: flex-start;
     margin-top: 1rem;
   }
   .current-hrs {
-    margin: 0;
-    position: relative;
-    right: 1rem;
     font-size: 2.6rem;
     margin-bottom: 0.3rem;
   }
