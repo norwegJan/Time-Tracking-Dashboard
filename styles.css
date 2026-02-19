@@ -1,3 +1,8 @@
+:root {
+  --card-strip-h: 3rem;
+  --card-overlap: 5px;
+}
+
 /* ===== RESET ===== */
 
 html {
@@ -223,7 +228,7 @@ body {
 }
 
 .activity {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .current-hrs {
@@ -271,6 +276,15 @@ body {
   .header-timeframes {
     justify-content: space-around;
     font-size: 1.2rem;
+  }
+
+  .work-bg,
+  .play-bg,
+  .study-bg,
+  .exercise-bg,
+  .social-bg,
+  .self-care-bg {
+    min-height: 3.5rem;
   }
 
   .work {
@@ -330,20 +344,43 @@ body {
     margin: 0;
   }
 
-  /* .content {
-    margin: 0;
-  } */
+  .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px 15px 15px 15px;
+    padding-top: calc(var(--card-strip-h) - var(--card-overlap));
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    margin: 0rem;
+    transform: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 15px 15px 15px 15px;
+    padding: 1.5rem;
+  }
 
   .app-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    /* gap: 1.5rem; */
+    gap: 2rem;
     grid-template-areas:
       "app-header     work      play      study"
       "app-header     exercise  social    self-care";
-    max-width: 1050px;
-    margin-top: 15rem;
+    max-width: 1100px;
+    margin-top: 10rem;
   }
 
   .app-header {
@@ -361,7 +398,7 @@ body {
 
   .profile-img {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .name {
@@ -379,10 +416,47 @@ body {
     margin: 0;
     padding: 2.5rem 2rem;
     margin-top: -1rem;
+    height: 12rem;
+  }
+
+  .monthly {
+    margin-bottom: 2rem;
   }
 
   .activity {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .work-bg,
+  .play-bg,
+  .study-bg,
+  .exercise-bg,
+  .social-bg,
+  .self-care-bg {
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--card-strip-h);
+    z-index: 0;
+  }
+
+  .exercise-bg {
+    background-position-y: 7px;
+  }
+
+  .self-care-bg {
+    background-position-y: -6px;
+  }
+
+  .work-header,
+  .play-header,
+  .study-header,
+  .exercise-header,
+  .social-header,
+  .self-care-header {
+    margin-bottom: 1.1rem;
   }
 
   .work-main,
@@ -393,13 +467,11 @@ body {
   .self-care-main {
     display: flex;
     flex-direction: column;
-    justify-self: left;
     align-items: flex-start;
-    margin-top: 1rem;
   }
   .current-hrs {
-    font-size: 2.6rem;
-    margin-bottom: 0.3rem;
+    font-size: 2.9rem;
+    margin-bottom: 0.5rem;
   }
 
   .previous-hrs {
