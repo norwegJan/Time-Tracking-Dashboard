@@ -425,10 +425,9 @@ button.active {
     max-width: 100%;
     gap: 0.5rem;
     align-items: flex-start;
-    text-align: left;
     margin: 0;
     padding: 2.5rem 2rem;
-    margin-top: -1rem;
+    margin-top: -1.5rem;
     height: 12rem;
   }
 
