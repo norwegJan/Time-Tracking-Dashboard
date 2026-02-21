@@ -2,7 +2,7 @@ const dailyBtn = document.querySelector("#daily");
 const weeklyBtn = document.querySelector("#weekly");
 const monthlyBtn = document.querySelector("#monthly");
 
-let activites = [];
+let activities = [];
 
 const labelMap = {
   daily: "Yesterday",
@@ -15,7 +15,7 @@ function titleToId(title) {
 }
 
 function render(timeframe) {
-  activites.forEach((activity) => {
+  activities.forEach((activity) => {
     const id = titleToId(activity.title);
     const card = document.querySelector(`#${id}`);
     if (!card) return;
@@ -31,9 +31,13 @@ function render(timeframe) {
 
 function setActiveBtn(activeBtn) {
   dailyBtn.classList.remove("active");
+  dailyBtn.setAttribute("aria-pressed", "false");
   weeklyBtn.classList.remove("active");
+  weeklyBtn.setAttribute("aria-pressed", "false");
   monthlyBtn.classList.remove("active");
+  monthlyBtn.setAttribute("aria-pressed", "false");
   activeBtn.classList.add("active");
+  activeBtn.setAttribute("aria-pressed", "true");
 }
 
 fetch("./data.json")
@@ -44,7 +48,7 @@ fetch("./data.json")
     return response.json();
   })
   .then((data) => {
-    activites = data;
+    activities = data;
     render("daily");
     setActiveBtn(dailyBtn);
   })

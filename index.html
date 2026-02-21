@@ -27,16 +27,40 @@
       <div id="app-container" class="app-container">
         <div id="app-header" class="app-header">
           <div class="header-profile">
-            <img src="./images/image-jeremy.png" alt="" class="profile-img" />
+            <img
+              src="./images/image-jeremy.png"
+              alt="profile image of user Jeremy Robson"
+              class="profile-img"
+            />
             <h1>
               <span class="report">Report for</span><br />
               <span class="name">Jeremy Robson</span>
             </h1>
           </div>
-          <div class="header-timeframes">
-            <button id="daily" class="daily">Daily</button>
-            <button id="weekly" class="weekly">Weekly</button>
-            <button id="monthly" class="monthly">Monthly</button>
+          <div
+            class="header-timeframes"
+            role="group"
+            aria-label="select timeframe"
+          >
+            <button type="button" id="daily" class="daily" aria-pressed="true">
+              Daily
+            </button>
+            <button
+              type="button"
+              id="weekly"
+              class="weekly"
+              aria-pressed="false"
+            >
+              Weekly
+            </button>
+            <button
+              type="button"
+              id="monthly"
+              class="monthly"
+              aria-pressed="false"
+            >
+              Monthly
+            </button>
           </div>
         </div>
         <div id="work" class="work">
@@ -128,7 +152,10 @@
     <footer>
       <div class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          rel="noopener noreferrer"
+          target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="https://github.com/norwegJan">norwegJan</a>.
       </div>
